@@ -20,7 +20,7 @@ router.Handler("POST", "/thing", restiful.Handle(
 
 Having middleware control-flow managed by a single http.Handler takes away the need to pass around “next”, and provides an expectation that middleware only needs to return an error, else the flow shall continue. Who doesn’t love returning errors in Go?  
   
-Try it out, to me it really just feels right. Our middleware interface is basically ServeHTTP with an error return, and our route handler is an http.Handler processing middleware handlers looking for an error. We can use any http.Request based context package (such as http://www.gorillatoolkit.org/pkg/context), to pass contextual info along the middleware chain.
+Try it out, to me it really just feels right. Our middleware interface is basically ServeHTTP with an error return, and our route handler is an http.Handler processing middleware handlers looking for an error. We can use an http.Request based context package (such as http://www.gorillatoolkit.org/pkg/context), to pass contextual info along the middleware chain.
 
 ```go
 // http://laicos.com/writing-handsome-golang-middleware/
