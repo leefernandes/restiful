@@ -4,11 +4,11 @@ Super Straightforward Golang Middleware.
 There are some sweet middleware packages available from the go community, but I think there is room for more of less. Less additional code, and less of a learning curve for those to follow.
 
 ```go
-go get github.com/itsleeowen/restiful
+go get github.com/leefernandes/restiful
 ```
 
 ```go
-import "github.com/itsleeowen/restiful"
+import "github.com/leefernandes/restiful"
 
 router.Handler("POST", "/thing", restiful.Handle(
   acl.ValidToken,
@@ -31,7 +31,7 @@ import (
 
 	"github.com/julienschmidt/httprouter"
 	"github.com/gorilla/context"
-	"github.com/itsleeowen/restiful/v1"
+	"github.com/leefernandes/restiful/v1"
 )
  
 func main() {
