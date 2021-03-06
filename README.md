@@ -58,7 +58,7 @@ func MiddleTwo(w http.ResponseWriter, r *http.Request) error {
  
 func GetThing(w http.ResponseWriter, r *http.Request) error {
 	value := context.Get(r, "rideTheMiddlewareChain").(string)
-      context.Clear(r)
+	context.Clear(r)
 	w.WriteHeader(http.StatusOK)
 	w.Header().Set("Content-Type", "application/json")
 	w.Write([]byte(`{"result": "`+value+`"}`))
